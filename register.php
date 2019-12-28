@@ -10,6 +10,8 @@
     $country = mysqli_real_escape_string($db, $_POST['country']);
     $type = mysqli_real_escape_string($db, $_POST['type']);
     
+    echo $type;
+
     if($type == 'donor') {
         $select = "SELECT * FROM donor WHERE email = ('$email')";
         $result = $db->query($select);
@@ -34,6 +36,8 @@
 
 
     if ($done) {
+        $_SESSION['is_logged']=true;
+        $_SESSION['username']=$firstname.''.$lastname;
         header("Location: ./Home.html");
         exit;
     }

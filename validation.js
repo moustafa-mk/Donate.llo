@@ -3,30 +3,30 @@ const validateLogin = (email, password) => {
 	var isPasswordValid = validatePassword(password.value);
 	if(!isEmailValid) {
 		alert("Email not valid!");
-		return(false);
+		return false;
 	} else if(!isPasswordValid) {
 		alert("password not valid!");
-		return(false);
+		return false;
 	} else {
-		return(true);
+		return true;
 	}
 }
 
 const validateRegister = (firstName, lastName, email, password) => {
 	if(firstName.value.length < 1 || lastName.value.length < 1) {
 		alert("invalid name");
-		return(false);
+		return false;
 	}
 	var isEmailValid = validateMail(email.value);
 	var isPasswordValid = validatePassword(password.value);
 	if(!isEmailValid) {
 		alert("Email not valid!");
-		return(false);
+		return false;
 	} else if(!isPasswordValid) {
 		alert("password not valid!");
-		return(false);
+		return false;
 	} else {
-		return(true);
+		return true;
 	}
 }
 
