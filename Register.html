@@ -20,19 +20,16 @@
       <li class="nav-item">
         <a class="nav-link" href="Register.html">Register</a>
       </li>
-        <li class="nav-item">
-        <a class="nav-link" href="donateTo.html">Donate To</a>
-      </li>
        <li class="nav-item">
         <a class="nav-link" href="About%20us.html">ِAbout us</a>
       </li>
-      
+
     </ul>
-    
+
   </div>
 </nav>
 <div class="container">
-  <form action="action_page.php" name="register">
+  <form action="register.php" name="register" method="post">
     <div class="row">
       <div class="col-25">
         <label for="fname">First Name</label>
@@ -54,7 +51,7 @@
         <label for="country">Country</label>
       </div>
       <div class="col-75">
-          <input type="text" id="country" name="Country" placeholder="Your Country is..">
+          <input type="text" id="country" name="country" placeholder="Your Country is..">
               </div>
     </div>
     <div class="row">
@@ -70,7 +67,7 @@
         <label for="Password">Password</label>
       </div>
       <div class="col-75">
-        <input type="password" id="pw" name="pw" placeholder="Your Password.." data-toggle="tooltip" data-placement="top" title="at least 8 characters contains upper case,lower case and number ">
+        <input type="password" id="pw" name="password" placeholder="Your Password.." data-toggle="tooltip" data-placement="top" title="at least 8 characters contains upper case,lower case and number ">
       </div>
     </div>
        <div class="row">
@@ -79,23 +76,23 @@
       </div>
       <div class="col-75">
         <select name="type">
-            <option value="Donor">Donor</option>
-            <option value="Donee">Donee</option>
+            <option value="donor">Donor</option>
+            <option value="donee">Donee</option>
           </select>
       </div>
     </div>
     <div class="row">
-        
-      <input type="submit" value="Submit" onclick="validateRegister(document.register.firstname,document.register.lastname,document.register.email,document.register.pw)" >
+
+      <input type="submit" value="Submit" onclick="return validateRegister(document.register.firstname,document.register.lastname,document.register.email,document.register.password);" >
         </div>
   </form>
 </div>
-        
+
 <footer class="footer footer-transparent">
         <center><h1>Follow us on</h1></center>
-            
+
         <div class="container-fluid text-center">
-        
+
             <div class="row">
                 <div class="col-lg-2 col-md-6">
                 <div class="social">
@@ -128,14 +125,14 @@
                 </div>
                 </div>
                             </div>
-         
+
             </div>
-                
+
         <!-- End SocialMedia Section-->
     <!-- Start Footer -->
-    
 
-                
+
+
     </footer>
     <script src="validation.js"></script>
             <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

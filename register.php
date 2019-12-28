@@ -9,7 +9,7 @@
     $email = mysqli_real_escape_string($db, $_POST['email']);
     $country = mysqli_real_escape_string($db, $_POST['country']);
     $type = mysqli_real_escape_string($db, $_POST['type']);
-    
+
     echo $type;
 
     if($type == 'donor') {
