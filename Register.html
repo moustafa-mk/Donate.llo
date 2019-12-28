@@ -20,6 +20,9 @@
       <li class="nav-item">
         <a class="nav-link" href="Register.html">Register</a>
       </li>
+        <li class="nav-item">
+        <a class="nav-link" href="donateTo.html">Donate To</a>
+      </li>
        <li class="nav-item">
         <a class="nav-link" href="About%20us.html">ِAbout us</a>
       </li>
@@ -29,7 +32,7 @@
   </div>
 </nav>
 <div class="container">
-  <form action="register.php" name="register" method="post">
+  <form action="action_page.php" name="register">
     <div class="row">
       <div class="col-25">
         <label for="fname">First Name</label>
@@ -51,7 +54,7 @@
         <label for="country">Country</label>
       </div>
       <div class="col-75">
-          <input type="text" id="country" name="country" placeholder="Your Country is..">
+          <input type="text" id="country" name="Country" placeholder="Your Country is..">
               </div>
     </div>
     <div class="row">
@@ -67,7 +70,7 @@
         <label for="Password">Password</label>
       </div>
       <div class="col-75">
-        <input type="password" id="pw" name="password" placeholder="Your Password.." data-toggle="tooltip" data-placement="top" title="at least 8 characters contains upper case,lower case and number ">
+        <input type="password" id="pw" name="pw" placeholder="Your Password.." data-toggle="tooltip" data-placement="top" title="at least 8 characters contains upper case,lower case and number ">
       </div>
     </div>
        <div class="row">
@@ -76,14 +79,14 @@
       </div>
       <div class="col-75">
         <select name="type">
-            <option value="donor">Donor</option>
-            <option value="donee">Donee</option>
+            <option value="Donor">Donor</option>
+            <option value="Donee">Donee</option>
           </select>
       </div>
     </div>
     <div class="row">
         
-      <input type="submit" value="Submit" onclick="return validateRegister(document.register.firstname,document.register.lastname,document.register.email,document.register.password);" >
+      <input type="submit" value="Submit" onclick="validateRegister(document.register.firstname,document.register.lastname,document.register.email,document.register.pw)" >
         </div>
   </form>
 </div>
