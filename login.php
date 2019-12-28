@@ -6,7 +6,7 @@
     $password = mysqli_real_escape_string($db, $_POST['password']);
     $email = mysqli_real_escape_string($db, $_POST['email']);
     $type = mysqli_real_escape_string($db, $_POST['type']);
-    
+
     if($type == 'donor') {
         $select = "SELECT * FROM donor WHERE email = ('$email')";
         $result = $db->query($select);

@@ -30,7 +30,7 @@ color: black;
 {
     text-align:center;
 }
-.team h1 
+.team h1
 {
     margin-bottom: 60px;
     padding-top: 40px;
@@ -40,14 +40,14 @@ color: black;
 body{
     margin: auto;
     width: 100%;
-    
+
 }
  .container-fluid{
                 min-height: 170px;
                 color: white;
                 padding-top: 20px;
             }
-            
+
             .container-fluid h1{
                 text-align: center;
                 color: white;
