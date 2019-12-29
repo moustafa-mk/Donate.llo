@@ -42,22 +42,7 @@ const validatePassword = (password) => {
            password.length > 8;
 }
 const validatePayment = (number , holderName , amount, expdate)=> {
-
-	/*var today = new Date();
-	var dd = String(today.getDate()).padStart(2, '0');
-	var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-	var yyyy = today.getFullYear();
-	var d1 = new Date();
-	expdate = new Date();
-	var same = d1.getFullYear===expdate;*/
- //today = mm + '/' + dd + '/' + yyyy;
- var expdate = new Date(); 
-//# => Fri May 20 2016 16:09:43 GMT+0530 (India Standard Time)
-
-var date2 = new Date();
-//date2.setDate(expdate.getDate() - 1); 
-//# => Thu May 19 2016 16:09:43 GMT+0530 (India Standard Time)
-	if(number.value.length != 15) {
+    if(number.value.length != 15) {
 		alert("Card number invalid!");
 		return false;
 	}
@@ -69,8 +54,18 @@ var date2 = new Date();
 		alert("invalid data!");
 		return false;
 	}
-	else if (date2 > expdate.value ) {
-		return false;
+    // (YYYY-MM-DD)
+    var now = new Date();
+    var temp= expdate.value;
+    var arr= temp.split('-');
+    var then=new Date(arr[0] , arr[1]-1 ,arr[2]);
+    if (now < then){
+
+        return true;
+    }
+    else if (now >= then) {
+        alert("invalid Date");
+        return false;
+    }
 
 	}
-}
