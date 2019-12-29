@@ -42,7 +42,7 @@ const validatePassword = (password) => {
            password.length > 8;
 }
 const validatePayment = (number , holderName , amount, expdate)=> {
-	alert ("henaa");
+
 	/*var today = new Date();
 	var dd = String(today.getDate()).padStart(2, '0');
 	var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
@@ -54,25 +54,22 @@ const validatePayment = (number , holderName , amount, expdate)=> {
  var expdate = new Date(); 
 //# => Fri May 20 2016 16:09:43 GMT+0530 (India Standard Time)
 
-
 var date2 = new Date();
-date2.setDate(date.getDate() - 1); 
+//date2.setDate(expdate.getDate() - 1); 
 //# => Thu May 19 2016 16:09:43 GMT+0530 (India Standard Time)
-
-	if(number.length!=15) {
+	if(number.value.length != 15) {
 		alert("Card number invalid!");
 		return false;
 	}
-	else if (holderName.length <1) {
+	else if (holderName.value.length <1) {
 		alert ("name is empty!");
 		return false;
 	}
-	else if (amount<1) {
+	else if (amount.value<1) {
 		alert("invalid data!");
 		return false;
 	}
-	else if (date2 < expdate ) {
-		alert("ye7ra2 talata kosomeeenek");
+	else if (date2 > expdate.value ) {
 		return false;
 
 	}
